@@ -1,0 +1,321 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="1e9f91e02fbe2ec08ef03eccbad206760135669c87981ed33b5a0a0051b9dd4b.html">Registro En Haceb</a></span>
+                > <span class="truncate-60"><a
+                    href="ec3b516ae0233e3a45607d89742718b67f6e87eac5526c7abebea3206a57dfd0.html">Registrarse como usuario nuevo en Haceb </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 01-12-2023 11:52</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Registro En Haceb </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon fa-2x' title='ERROR'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="error-color">Registrarse como usuario nuevo en Haceb
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Timeout exception: Expected condition failed: waiting for element to be clickable: PaginaRegistroPage.nombrePerfil (tried for 20 second(s) with 500 milliseconds interval)</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall"
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>org.openqa.selenium.TimeoutException </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>com.haceb.utils.Esperas.espera2(Esperas.java:22)<br />com.haceb.steps.PaginaRegistroSteps.ventanaPerfil(PaginaRegistroSteps.java:97)<br />com.haceb.stepDefinitions.RegistroHacebStepDef.acepteDatosPersonales(RegistroHacebStepDef.java:56)<br />io.cucumber.java.Invoker.doInvoke(Invoker.java:66)<br />io.cucumber.java.Invoker.invoke(Invoker.java:24)<br />io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)<br />io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java:85)<br />io.cucumber.core.runner.TestStep.run(TestStep.java:57)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)<br />io.cucumber.core.runner.TestCase.run(TestCase.java:84)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java:75)<br />io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:129)<br />io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)<br />io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:129)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)<br />io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:259)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:59)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)<br /></pre>
+                    </div>
+
+                    <h4>
+                        Caused by: org.openqa.selenium.NoSuchElementException
+                    </h4>
+                    <div>
+                            <pre>Timed out after 2 seconds. Element not found<br>For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element<br>Build info: version: '4.7.1', revision: 'c6795baf1a3'<br>System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.19'<br>Driver info: driver.version: unknown</pre>
+                        <pre>com.haceb.utils.Esperas.espera2(Esperas.java :22)<br />com.haceb.steps.PaginaRegistroSteps.ventanaPerfil(PaginaRegistroSteps.java :97)<br />com.haceb.stepDefinitions.RegistroHacebStepDef.acepteDatosPersonales(RegistroHacebStepDef.java :56)<br />io.cucumber.java.Invoker.doInvoke(Invoker.java :66)<br />io.cucumber.java.Invoker.invoke(Invoker.java :24)<br />io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java :47)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java :29)<br />io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java :66)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java :63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java :85)<br />io.cucumber.core.runner.TestStep.run(TestStep.java :57)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java :51)<br />io.cucumber.core.runner.TestCase.run(TestCase.java :84)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java :75)<br />io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java :129)<br />io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java :23)<br />io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java :129)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java :144)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java :28)<br />io.cucumber.junit.FeatureRunner.run(FeatureRunner.java :137)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java :259)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java :59)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java :69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java :74)<br /></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                    <div class="panel-body">
+                        <a href="pagesource15312818097464998436.html" target="_blank" class="btn btn-info">HTML Source</a>
+                    </div>
+            </div>
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="707bab2f3f6e1065011af533e28ecc204ec1a139f95e4d8e614ce8ca4f599b7d.png" title=" Dado que el usuario abre el navegador y de click en registrarse" width="1848"/>
+                <img src="707bab2f3f6e1065011af533e28ecc204ec1a139f95e4d8e614ce8ca4f599b7d.png" title=" Abrir Navegador" width="1848"/>
+                <img src="707bab2f3f6e1065011af533e28ecc204ec1a139f95e4d8e614ce8ca4f599b7d.png" title=" Pararse en Mi perfil" width="1848"/>
+                <img src="9f444dc62ed12a80318f7f750d4d94453e496342ee646aee7d95163104b7f668.png" title=" Pararse en Mi perfil" width="1848"/>
+                <img src="b0efbaa2df8a269959e48e8ddf0a866ca2ff6b9903c524a89d22118b8f6bf432.png" title=" Pararse en Mi perfil (completed)" width="1848"/>
+                <img src="b0efbaa2df8a269959e48e8ddf0a866ca2ff6b9903c524a89d22118b8f6bf432.png" title=" Seleccionar Registro" width="1848"/>
+                <img src="4b751cf4b8b3d3108beb2334adb6c1d4e357153563fd1c803ef2d6296d1f67a4.png" title=" Seleccionar Registro" width="1848"/>
+                <img src="c726cfce3c846dbfbff99d12784a9e93bfd7b0a8475c92cb79ae5040260e6cca.png" title=" Seleccionar Registro (completed)" width="1848"/>
+                <img src="e2c64db23780847e7502f37b69e3a02d37a265987621cc7db59a2206ccc6bf0c.png" title=" Cerrar PopUp en caso de ser visible" width="1848"/>
+                <img src="6576f875cb10e6389a089874d7dc0ac4a1fdde3c517a6c4dc5c60ac23635d9e7.png" title=" Cerrar PopUp en caso de ser visible (completed)" width="1848"/>
+                <img src="6576f875cb10e6389a089874d7dc0ac4a1fdde3c517a6c4dc5c60ac23635d9e7.png" title=" Boton Ingresar a Haceb" width="1848"/>
+                <img src="9c29970504a7ee9e50cd89fec172fa42475f39589f7da04bc3dff33a68a1f30f.png" title=" Boton Ingresar a Haceb (completed)" width="1848"/>
+                <img src="9c29970504a7ee9e50cd89fec172fa42475f39589f7da04bc3dff33a68a1f30f.png" title=" Ingresar nueva ventana" width="1848"/>
+                <img src="aacd3a2927935424850c8a61f3c2c655b30634a80abf2976d4bc28e661ab29fd.png" title=" Ingresar nueva ventana (completed)" width="1920"/>
+                <img src="aacd3a2927935424850c8a61f3c2c655b30634a80abf2976d4bc28e661ab29fd.png" title=" Dado que el usuario abre el navegador y de click en registrarse (completed)" width="1920"/>
+                <img src="883bde421b9d121925faa9dcf5b7edfc819c4c8cc7145bbaa8976928ed9f50d4.png" title=" Cuando el usuario ingrese sus datos" width="1920"/>
+                <img src="7293b09219348837660f968f0442ef444fa16c4b133a3b29874e451abd05435c.png" title=" Insertar Correo" width="1920"/>
+                <img src="c7e2b26961f6820880d09a37d6e0942627aae37f8029a67fc2473943fb0f5fae.png" title=" Insertar Correo (completed)" width="1920"/>
+                <img src="c7e2b26961f6820880d09a37d6e0942627aae37f8029a67fc2473943fb0f5fae.png" title=" Insertar Nombre" width="1920"/>
+                <img src="bf83b09cd5a3da61eff47f1460396b8e5126709065cf3e71884990f779eca5fd.png" title=" Insertar Nombre (completed)" width="1920"/>
+                <img src="bf83b09cd5a3da61eff47f1460396b8e5126709065cf3e71884990f779eca5fd.png" title=" Insertar Apellido" width="1920"/>
+                <img src="aa49bb08b6bac53a99dd0b284588b94b241597adb1ca5c8f30739facaae63fee.png" title=" Insertar Apellido (completed)" width="1920"/>
+                <img src="aa49bb08b6bac53a99dd0b284588b94b241597adb1ca5c8f30739facaae63fee.png" title=" Ingresar Contrase&ntilde;a" width="1920"/>
+                <img src="992b5495957d9a72ad0029af5a55bb36688fc9ee27cdcf692db86d535be817fc.png" title=" Ingresar Contrase&ntilde;a (completed)" width="1920"/>
+                <img src="408c030dac80814c92707fbe7b73d267e2cfcd4f3b1dcbe4a107bd6a48890638.png" title=" Confirma Contrase&ntilde;a" width="1920"/>
+                <img src="1b11ed5f817542540967f06532ae93df50f8d03e9b54d7c90eb84fe9040dd5da.png" title=" Confirma Contrase&ntilde;a (completed)" width="1920"/>
+                <img src="1b11ed5f817542540967f06532ae93df50f8d03e9b54d7c90eb84fe9040dd5da.png" title=" Cuando el usuario ingrese sus datos (completed)" width="1920"/>
+                <img src="24261fc4021d21a82ac2677c7027037d2abdbbad3deb20bda9a95c8ea24a8e84.png" title=" Y acepte terminos y condiciones" width="1920"/>
+                <img src="a62179da45c5f1dd53a4f2a736dbe44cf2828eb9399abd5478238f1b7b044a0b.png" title=" Clic Checkbox" width="1920"/>
+                <img src="c9adbe4de83509530386022573cf42b6240c5f4843ab0528fcb338ca383bccc9.png" title=" Clic Checkbox (completed)" width="1920"/>
+                <img src="c9adbe4de83509530386022573cf42b6240c5f4843ab0528fcb338ca383bccc9.png" title=" Y acepte terminos y condiciones (completed)" width="1920"/>
+                <img src="164d290eda17b33c711ade639ce62c4be8b5f4ab79dc26ef71ca8c1574798a88.png" title=" Y acepte datos personales" width="1920"/>
+                <img src="164d290eda17b33c711ade639ce62c4be8b5f4ab79dc26ef71ca8c1574798a88.png" title=" Clic en Si Acepto" width="1920"/>
+                <img src="13a9caf7cc2448cc1f6012a7bc93089a0efa34f28431f7fde89c114a6704e304.png" title=" Clic en Si Acepto" width="1920"/>
+                <img src="834aad53f2008e4f7970108591a9389884ca1b47a4fd9a1355dd4fd462edab2b.png" title=" Clic en Si Acepto (completed)" width="1920"/>
+                <img src="834aad53f2008e4f7970108591a9389884ca1b47a4fd9a1355dd4fd462edab2b.png" title=" Clic en Registrarme" width="1920"/>
+                <img src="508f0986d2367cda25a8c5346e67a4ead368cae603e68700ab542cf1b107d532.png" title=" Clic en Registrarme" width="1920"/>
+                <img src="50e4f7c551a4e25da84810d9513f1d8238d6d3ff917759466acedff8856a3c0b.png" title=" Clic en Registrarme (completed)" width="1920"/>
+                <img src="50e4f7c551a4e25da84810d9513f1d8238d6d3ff917759466acedff8856a3c0b.png" title=" Ingresar Cedula" width="1920"/>
+                <img src="3e9b3eb0ff7eaff65d579e6419b0669a73016aadda4390c68e75debadc78de44.png" title=" Ingresar Cedula (completed)" width="1920"/>
+                <img src="3e9b3eb0ff7eaff65d579e6419b0669a73016aadda4390c68e75debadc78de44.png" title=" Seleccionar Genero" width="1920"/>
+                <img src="163894034aa2edd7e6db965d2725e6a2b8d11416852b8ec00abe6f02c22b9d2d.png" title=" Seleccionar Genero (completed)" width="1920"/>
+                <img src="163894034aa2edd7e6db965d2725e6a2b8d11416852b8ec00abe6f02c22b9d2d.png" title=" Seleccionar Fecha de Nacimiento" width="1920"/>
+                <img src="d9af168083335c7da6e749daea27925785cfad4aed9ee01873b86a1275ac3bbf.png" title=" Seleccionar Fecha de Nacimiento (completed)" width="1920"/>
+                <img src="d9af168083335c7da6e749daea27925785cfad4aed9ee01873b86a1275ac3bbf.png" title=" Seleccionar Codigo Telefonico del Pais" width="1920"/>
+                <img src="5d75020fc60179c937e7875be1030c8e82604f52b4bc598f7f5ec9c209d12469.png" title=" Seleccionar Codigo Telefonico del Pais (completed)" width="1920"/>
+                <img src="5d75020fc60179c937e7875be1030c8e82604f52b4bc598f7f5ec9c209d12469.png" title=" Digitar Numero de Telefono" width="1920"/>
+                <img src="96b36b1c2c08b32950966b07564c78d8d85bdfc16f4f4655e961c292f45094b8.png" title=" Digitar Numero de Telefono (completed)" width="1920"/>
+                <img src="96b36b1c2c08b32950966b07564c78d8d85bdfc16f4f4655e961c292f45094b8.png" title=" Seleccionar Departamento" width="1920"/>
+                <img src="56725ec2617dc1cd25318f463f437a9ddbe33afcddb887f47b89a91c5615f8b9.png" title=" Seleccionar Departamento (completed)" width="1920"/>
+                <img src="56725ec2617dc1cd25318f463f437a9ddbe33afcddb887f47b89a91c5615f8b9.png" title=" Seleccionar Ciudad" width="1920"/>
+                <img src="3f8fa828c7432cfa3af03d16759d1df6df131bcfd674cb408813c580000d3cf3.png" title=" Seleccionar Ciudad (completed)" width="1920"/>
+                <img src="3f8fa828c7432cfa3af03d16759d1df6df131bcfd674cb408813c580000d3cf3.png" title=" Clic en boton enviar" width="1920"/>
+                <img src="17e8f7f9713166fe7adeed3eb8569e590799a1aef80bd3f8b84b299b8b360464.png" title=" Clic en boton enviar" width="1920"/>
+                <img src="c6a0a3dcbefdac45ffc47bd613878ef0c63dd56f5183557adcc1810a7795358c.png" title=" Clic en boton enviar (completed)" width="1920"/>
+                <img src="8d857cc42c34005997278f0b89b626c6d4833ba5241a599e1a8cbd59bab676a4.png" title=" Ingresar Ventana Perfil: <span class='error-color'>ERROR</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.6.0</span>
+</div>
+</body>
+</html>
