@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import java.util.Set;
 
 import static com.haceb.utils.Esperas.espera1;
+import static com.haceb.utils.Esperas.espera2;
 
 public class PaginaInicialSteps {
     @Page

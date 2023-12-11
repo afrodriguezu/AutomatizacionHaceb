@@ -18,5 +18,9 @@ public class PaginaInicialPage extends PageObject {
     @FindBy(how = How.XPATH, using = "//button[@id='vtexIdUI-custom-oauth']")
     public WebElementFacade buttonIngresar;
 
+    @FindBy(how = How.XPATH, using = "//*[@id='gigya-profile-form']/div[4]/div[3]/input")
+    public WebElementFacade nombrePerfil;
+
+
 
 }

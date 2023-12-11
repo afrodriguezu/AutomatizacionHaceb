@@ -1,8 +1,6 @@
 package com.haceb.stepDefinitions;
 
-import com.haceb.steps.PaginaInicialSteps;
-import com.haceb.steps.PaginaRegistroSteps;
-import com.haceb.steps.ValidacionPerfilStep;
+import com.haceb.steps.*;
 import io.cucumber.java.es.*;
 import net.thucydides.core.annotations.Steps;
 
@@ -12,7 +10,13 @@ public class RegistroHacebStepDef {
     PaginaInicialSteps paginaInicialSteps;
 
     @Steps
+    PaginaPerfilSteps paginaPerfilSteps;
+
+    @Steps
     PaginaRegistroSteps paginaRegistroSteps;
+
+    @Steps
+    PagSecRegistroSteps pagSecRegistroSteps;
 
     @Steps
     ValidacionPerfilStep validacionPerfilStep;
@@ -25,8 +29,8 @@ public class RegistroHacebStepDef {
         paginaInicialSteps.cerrarPopUp();
         paginaInicialSteps.ingresarHaceb();
         paginaInicialSteps.ventanaNueva();
-
     }
+
     @Cuando("el usuario ingrese sus datos")
     public void elUsuarioIngreseSusDatos() {
         paginaRegistroSteps.correoElectronico();
@@ -34,31 +38,30 @@ public class RegistroHacebStepDef {
         paginaRegistroSteps.apellido();
         paginaRegistroSteps.ingresaContrasena();
         paginaRegistroSteps.confirmaContrasena();
-
     }
+
     @Cuando("acepte terminos y condiciones")
     public void acepteTerminosYCondiciones() {
         paginaRegistroSteps.clicCheckboxTc();
-
-    }
-    @Cuando("acepte datos personales")
-    public void acepteDatosPersonales() {
         paginaRegistroSteps.clicAcepto();
         paginaRegistroSteps.clicRegistrarme();
-        paginaRegistroSteps.numCedula();
-        paginaRegistroSteps.selGenero();
-        paginaRegistroSteps.selFechaNac();
-        paginaRegistroSteps.selCodPais();
-        paginaRegistroSteps.digNumTelefono();
-        paginaRegistroSteps.selDepartamento();
-        paginaRegistroSteps.selCiudad();
-        paginaRegistroSteps.clicEnviar();
-        paginaRegistroSteps.ventanaPerfil();
-
     }
+
+    @Cuando("acepte datos personales")
+    public void acepteDatosPersonales() {
+        pagSecRegistroSteps.numCedula();
+        pagSecRegistroSteps.selGenero();
+        pagSecRegistroSteps.selFechaNac();
+        pagSecRegistroSteps.selCodPais();
+        pagSecRegistroSteps.digNumTelefono();
+        pagSecRegistroSteps.selDepartamento();
+        pagSecRegistroSteps.selCiudad();
+        pagSecRegistroSteps.clicEnviar();
+        paginaPerfilSteps.ventanaPerfil();
+    }
+
     @Entonces("el usuario podra ver su perfil")
     public void elUsuarioPodraVerSuPerfil() {
         validacionPerfilStep.validacionPerfil();
-
     }
 }
